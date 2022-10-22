@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 const res = require('express/lib/response');
+=======
+>>>>>>> 09d8f1c62d1096c579bbc4d676289df5ffade697
 const User = require('../models/user');
 
 const createUser = async (req,res) => {
@@ -8,6 +11,7 @@ const createUser = async (req,res) => {
     try {
         const user = await User.create({...content}); 
         
+<<<<<<< HEAD
         return res.status(201).json({data: user});
     } catch (error) {
         console.log(error);
@@ -85,4 +89,17 @@ module.exports = {
     getOneUser,
     updateOne,
     deleteOne
+=======
+        return res.statue(201).json({data: user});
+    } catch (error) {
+        console.log(error);
+        return res.statue(500).end();
+    }
+};
+
+
+
+module.exports = {
+    createUser
+>>>>>>> 09d8f1c62d1096c579bbc4d676289df5ffade697
 };
